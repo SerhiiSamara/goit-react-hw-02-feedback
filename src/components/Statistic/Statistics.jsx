@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Container, StatItem } from './Statistic.styled';
 
 export const Statistics = ({
@@ -16,4 +17,12 @@ export const Statistics = ({
       <StatItem>Positive feedback: {positivePercentage}%</StatItem>
     </Container>
   );
+};
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
 };
